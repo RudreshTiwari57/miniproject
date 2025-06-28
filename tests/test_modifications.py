@@ -1,10 +1,6 @@
 from pages.ui.login import Login
 from utilities.global_utiles import *
 import pytest
-# @given(u'runs complete')
-# def step_impl(context):
-#     context.login: Login = Login()
-#     context.driver = context.base.login(yaml_file_contents["username"],yaml_file_contents["password"],yaml_file_contents["usre_name_profile"])
 
 @log_function(logger)
 @pytest.mark.parametrize("data",yaml_file_contents)
