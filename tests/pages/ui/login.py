@@ -1,13 +1,16 @@
+from selenium.webdriver.remote.webelement import WebElement
 from utilities.locators import *
 from utilities.global_utiles import *
 from utilities.base import Base
 from playwright.sync_api import Page
+
+
 class Login:
     @log_function(logger)
     def login(self,
               username: str,
               password: str,
-              user_profile_name) -> Page:
+              user_profile_name) -> WebElement:
         driver: Page = Base().launch_browser()
         driver.locator(home_page_login_button).click()
         driver.locator(login_page_username_input_box).click()

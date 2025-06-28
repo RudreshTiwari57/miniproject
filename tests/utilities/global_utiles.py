@@ -32,6 +32,6 @@ def log_function(logger):
         return wrapper
     return decorator
 
-yaml_file_contents = LoadDataFiles().load_yaml_file(r"tests/config/userconfig.yaml")
+yaml_file_contents: dict[object:object] = LoadDataFiles().load_yaml_file(r"tests/config/userconfig.yaml")
 logger : Logger = Logger(f"logger_{datetime.now().strftime("%Y_%m_%d_%H_%M_%S")}")
 
